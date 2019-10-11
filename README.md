@@ -4,5 +4,5 @@
 No olvidar agregar los paquetes iniciales
 
 ```
-npm init
+npm install
 ```
