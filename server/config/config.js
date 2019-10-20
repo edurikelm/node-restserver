@@ -24,7 +24,7 @@ if(process.env.NODE_ENV === 'dev'){
 
 }else{
 
-    urlBD = 'mongodb+srv://edurikelm:XJrri6fpWWrX7gwu@cluster0-yrukj.mongodb.net/test';
+    urlBD = process.env.MONGO_URI;
 
 }
 
