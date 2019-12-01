@@ -1,16 +1,20 @@
 
 require('./config/config');
 
-const express = require('express');
-const mongoose = require('mongoose');
+const express = require('express'); //instalar
+const mongoose = require('mongoose'); //instalar
+const path = require('path'); //propio de node
 
 
 const app = express();
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser'); //instalar
 
 app.use(bodyParser.json());
 
 app.use(bodyParser.urlencoded({ extended: false }));
+
+//HABILITAR CARPETA PUBLIC
+app.use(express.static(path.resolve(__dirname, '../public')));
 
 //Configuración global de rutas
 app.use(require('./routes/index'));
